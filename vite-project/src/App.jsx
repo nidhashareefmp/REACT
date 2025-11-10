@@ -1,7 +1,14 @@
 
+import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Home from './Functional-components/hooks/useContext/theme/Home'
-import { ThemeProvider } from './Functional-components/hooks/useContext/theme/ThemeContext'
+import Home from './React-router-dom/Home'
+import About from './React-router-dom/About'
+import Products from './Dynamic-routing/Products'
+import ProductDetail from './Dynamic-routing/ProductDetail'
+// import Home from './Functional-components/hooks/useContext/theme/Home' 
+// import { ThemeProvider } from './Functional-components/hooks/useContext/theme/ThemeContext'
+// import { UserApiProvider } from './Functional-components/hooks/useContext/User-list/UserApiContext'
+// import UserList from './Functional-components/hooks/useContext/User-list/UserList'
 // import UseEff from './Functional-components/hooks/UseEffect/UseEff'
 // import UserList from './Functional-components/hooks/UseEffect/UserList'
 // import Counter from './Functional-components/hooks/useState/Counter'
@@ -20,7 +27,7 @@ function App() {
 
   return (
     <>
-      
+
       {/*-------------- {embedding expression}------------- */}
       {/* <Basic/> */}
       {/* <Welcome/> */}
@@ -42,10 +49,40 @@ function App() {
 
 
       {/* -----------useContext---------------- */}
-      {/* -----1.Theme---- */}
-      <ThemeProvider>
+      {/* -------1.Theme------ */}
+      {/* <ThemeProvider>
         <Home/>
-      </ThemeProvider>
+      </ThemeProvider> */}
+
+      {/* -----2.userlist ----- */}
+      {/* <UserApiProvider>
+      <UserList/>
+    </UserApiProvider> */}
+
+      {/* ------react-router-dom -------- */}
+      {/* 1.Basic  */}
+      {/* <div>
+        <nav>
+          <Link to='/'>Home</Link> |
+          <Link to='/about'>About</Link>
+
+        </nav>
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+
+
+        </Routes>
+      </div> */}
+      
+      {/* 2.dynamic-routing */}
+      <Routes>
+        <Route path='/' element={<Products/>}/>
+        <Route path='/products/:id' element={<ProductDetail/>}/>
+
+      </Routes>
+     
     </>
   )
 }
