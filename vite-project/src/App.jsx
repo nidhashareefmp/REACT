@@ -1,10 +1,20 @@
 
-import { Link, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 import './App.css'
-import Home from './React-router-dom/Home'
-import About from './React-router-dom/About'
-import Products from './Dynamic-routing/Products'
-import ProductDetail from './Dynamic-routing/ProductDetail'
+// import Website from './task-routing/pages/Website'
+// import About from './task-routing/pages/About'
+// import Home from './React-router-dom/Home';
+import Navbar from './nested-routing/Navbar';
+import Home from './nested-routing/pages/Home';
+import About from './nested-routing/pages/About';
+import Services from './nested-routing/pages/Services';
+import WebDev from './nested-routing/pages/Services/WebDev';
+import AppDev from './nested-routing/pages/Services/AppDev';
+// import Home from './React-router-dom/Home'
+// import About from './React-router-dom/About'
+// import Products from './Dynamic-routing/Products'
+// import ProductDetail from './Dynamic-routing/ProductDetail'
+// import Navbar from './nested-routing/Navbar'
 // import Home from './Functional-components/hooks/useContext/theme/Home' 
 // import { ThemeProvider } from './Functional-components/hooks/useContext/theme/ThemeContext'
 // import { UserApiProvider } from './Functional-components/hooks/useContext/User-list/UserApiContext'
@@ -75,14 +85,30 @@ function App() {
 
         </Routes>
       </div> */}
-      
+
       {/* 2.dynamic-routing */}
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<Products/>}/>
         <Route path='/products/:id' element={<ProductDetail/>}/>
 
+      </Routes> */}
+
+
+      {/* ----3.NESTED-ROUTING ---- */}
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/About' element={<About />} />
+        <Route path='/Services' element={<Services />}>
+        <Route path='web-dev' element={<WebDev/>}/>
+                <Route path='app-dev' element={<AppDev/>}/>
+
+
+        </Route>
+
       </Routes>
-     
+
+
     </>
   )
 }
@@ -112,5 +138,5 @@ export default App
 //         <UnMounting/>
 //       </div>
 //     )
-//   }
+//   }0
 // }
