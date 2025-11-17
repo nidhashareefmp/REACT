@@ -1,15 +1,18 @@
 
 import { Route, Routes } from 'react-router-dom';
-import './App.css'
+// import './App.css'
+// import Person from './embedding-expression/person';
+import Items from './React-keys/Items';
+import AllProducts from './React-keys/AllProducts';
 // import Website from './task-routing/pages/Website'
 // import About from './task-routing/pages/About'
 // import Home from './React-router-dom/Home';
-import Navbar from './nested-routing/Navbar';
-import Home from './nested-routing/pages/Home';
-import About from './nested-routing/pages/About';
-import Services from './nested-routing/pages/Services';
-import WebDev from './nested-routing/pages/Services/WebDev';
-import AppDev from './nested-routing/pages/Services/AppDev';
+// import Navbar from './nested-routing/Navbar';
+// import Home from './nested-routing/pages/Home';
+// import About from './nested-routing/pages/About';
+// import Services from './nested-routing/pages/Services';
+// import WebDev from './nested-routing/pages/Services/WebDev';
+// import AppDev from './nested-routing/pages/Services/AppDev';
 // import Home from './React-router-dom/Home'
 // import About from './React-router-dom/About'
 // import Products from './Dynamic-routing/Products'
@@ -43,6 +46,7 @@ function App() {
       {/* <Welcome/> */}
       {/* <FunctionCalling/> */}
       {/* {<Conditional/>} */}
+      {/* <Person/> */}
 
       {/* ----------------functional-components----------------  */}
       {/* <Basic/> */}
@@ -95,19 +99,24 @@ function App() {
 
 
       {/* ----3.NESTED-ROUTING ---- */}
-      <Navbar />
+      {/* <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/About' element={<About />} />
         <Route path='/Services' element={<Services />}>
         <Route path='web-dev' element={<WebDev/>}/>
-                <Route path='app-dev' element={<AppDev/>}/>
+        <Route path='app-dev' element={<AppDev/>}/>
 
 
         </Route>
 
-      </Routes>
+      </Routes> */}
 
+
+      {/*  ----- REACT-KEYS ------ */}
+
+      {/* <Items /> */}
+      <AllProducts/>
 
     </>
   )

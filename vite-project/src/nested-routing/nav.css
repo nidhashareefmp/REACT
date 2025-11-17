@@ -1,4 +1,3 @@
-/* Reset */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,7 +5,7 @@ body {
 
 /* Navbar container */
 nav {
-  background-color: #1a2235; /* Dark blue background */
+  background-color: #1a2235; 
   color: white;
   padding: 15px 20px;
   display: flex;
@@ -71,7 +70,7 @@ ul li a.active {
   }
 
   ul {
-    display: none; /* hide menu by default */
+    display: none; 
     flex-direction: column;
     background: #1a2235;
     position: absolute;
