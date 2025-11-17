@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 // import Person from './embedding-expression/person';
 import Items from './React-keys/Items';
 import AllProducts from './React-keys/AllProducts';
+import SimpleForm from './Form/SimpleForm';
 // import Website from './task-routing/pages/Website'
 // import About from './task-routing/pages/About'
 // import Home from './React-router-dom/Home';
@@ -116,7 +117,11 @@ function App() {
       {/*  ----- REACT-KEYS ------ */}
 
       {/* <Items /> */}
-      <AllProducts/>
+      {/* <AllProducts/> */}
+
+      {/* FORM  */}
+     <SimpleForm/>
+
 
     </>
   )
