@@ -13,8 +13,8 @@ const SimpleForm = () => {
     } else {
         setError('');
         alert('form submitted');
-        console.log('form email', email);
-    }
+        console.log('form email',email);
+    }
 }
 
   return (
