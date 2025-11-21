@@ -1,0 +1,102 @@
+.job-container {
+  background:beige;
+  min-height: 100vh;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.job-container h2 {
+  color: white;
+  background-color: black;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 3px;
+  font-weight: 600;
+
+}
+
+.job-form {
+  background: rgb(218, 218, 218);
+  width: 450px;
+  padding: 25px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.cv-upload {
+  display: flex;
+  gap: 8px;
+}
+
+.cv-upload input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.browse-btn {
+  background: orange;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.browse-btn input {
+  display: none;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reset-btn {
+  background: #ffa726;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.send-btn {
+  background:green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}

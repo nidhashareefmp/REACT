@@ -7,6 +7,7 @@ import AllProducts from './React-keys/AllProducts';
 import SimpleForm from './Form/SimpleForm';
 import Form from './Form/Form';
 import Crud from './local-storage/Crud';
+import Tasks from './Form/tasks';
 // import Website from './task-routing/pages/Website'
 // import About from './task-routing/pages/About'
 // import Home from './React-router-dom/Home';
@@ -128,6 +129,9 @@ function App() {
      {/* ----------- local storage ---------- */}
      <Crud/>
 
+
+{/* ----- tasks ------ */}
+   {/* <Tasks/> */}
 
     </>
   )

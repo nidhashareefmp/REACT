@@ -11,24 +11,24 @@ const Crud = () => {
     })
 
     const [users, setUsers] = useState([]);
-    const [editMode, setEditMode] = useState(true);
+    const [editMode, setEditMode] = useState(false);
     const [errors, setErrors] = useState({});
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-         const stored = localStorage.getItem("users");
-         if(stored){
+        const stored = localStorage.getItem("users");
+        if (stored) {
             try {
                 const parsedUser = JSON.parse(stored);
                 setUsers(parsedUser)
-            }catch (error) {
+            } catch (error) {
                 console.log('Error parsing data', error);
                 localStorage.removeItem("users"); //clear corrupted date
-                
+
             }
-         }
-         setIsLoaded(true);
-    },[]);
+        }
+        setIsLoaded(true);
+    }, []);
 
     //save users to localstorage (whenever user changes. only after initial load)
     useEffect(() => {
@@ -36,7 +36,7 @@ const Crud = () => {
             localStorage.setItem("users", JSON.stringify(users))
 
         }
-    }, [users.isLoaded])
+    }, [users, isLoaded])
 
     const handleChange = (e) => {
         const { name, value } = e.target;  //called every time a user types or changes a form field.
@@ -142,8 +142,62 @@ const Crud = () => {
                         Cancel</button>
                 )}
             </form>
+
+            <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginBottom: '10px'
+            }}>
+                <h2>User List</h2>
+                {users.length > 0 && (
+                    <button style={{ backgroundColor: 'red', color: 'white', border: 'none', padding: '8px 12px', borderRadius: '4px', cursor: 'pointer', marginLeft: '30px' }}
+                    >
+                        Clear All Data
+                    </button>
+
+                )}
+
+            </div>
+
+            {/* ------ table design ----- */}
+            {users.length > 0 ? (
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {users.map(user => (
+                            <tr key={user.id}>
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                                <td>{user.age}</td>
+                                <td>
+                                    <button>Edit</button>
+                                    <button style={{marginLeft:'10px'}}
+                                    >Delete
+
+                                    </button>
+                                </td>
+                            </tr>
+
+                        ))}
+                    </tbody>
+                </table>
+
+            ) : (
+                <p> No user added yet </p>
+
+            )}
         </div>
     )
 }
+
+
 
 export default Crud
