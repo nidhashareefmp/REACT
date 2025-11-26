@@ -1,0 +1,98 @@
+.formnew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- FORM ---------- */
+form {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.55rem 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+p {
+    margin: 4px 0 0;
+    color: red;
+    font-size: 0.85rem;
+}
+
+/* ----------- TABLE ------------- */
+table {
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+th,
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #333;
+}

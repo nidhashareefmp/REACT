@@ -9,6 +9,8 @@ import { Route, Routes } from 'react-router-dom';
 // import Crud from './local-storage/Crud';
 // import Tasks from './Form/tasks';
 import AxiosGet from './axios/AxiosGet';
+import Tab from './local-storage/session-storage/tab';
+import AxiosPost from './axios/AxiosPost';
 // import Website from './task-routing/pages/Website'
 // import About from './task-routing/pages/About'
 // import Home from './React-router-dom/Home';
@@ -124,19 +126,25 @@ function App() {
       {/* <AllProducts/> */}
 
       {/* FORM  */}
-     {/* <SimpleForm/> */}
-     {/* <Form/>  */}
+      {/* <SimpleForm/> */}
+      {/* <Form/>  */}
 
-     {/* ----------- local storage ---------- */}
-     {/* <Crud/> */}
+      {/* ----------- local storage ---------- */}
+      {/* <Crud/> */}
 
-     {/* axios  */}
+      {/* sessionStorage  */}
+      {/* <Tab /> */}
 
-     <AxiosGet/>
+      {/*------------------ axios ---------------  */}
+
+      {/* <AxiosGet/> */}
+      <AxiosPost/>
 
 
-{/* ----- tasks ------ */}
-   {/* <Tasks/> */}
+
+
+      {/* ----- tasks ------ */}
+      {/* <Tasks/> */}
 
     </>
   )
