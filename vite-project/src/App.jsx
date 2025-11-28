@@ -1,5 +1,8 @@
 
-import { Route, Routes } from 'react-router-dom';
+// import { Route, Routes } from 'react-router-dom';
+// import AxiosPuts from './axios/AxiosPuts';
+import AxiosDelete from './axios/AxiosDelete';
+import BasicHookForm from './Form/react-hook-form/BasicHookForm';
 // import './App.css'
 // import Person from './embedding-expression/person';
 // import Items from './React-keys/Items';
@@ -8,9 +11,10 @@ import { Route, Routes } from 'react-router-dom';
 // import Form from './Form/Form';
 // import Crud from './local-storage/Crud';
 // import Tasks from './Form/tasks';
-import AxiosGet from './axios/AxiosGet';
-import Tab from './local-storage/session-storage/tab';
-import AxiosPost from './axios/AxiosPost';
+// import AxiosGet from './axios/AxiosGet';
+// import Tab from './local-storage/session-storage/tab';
+// import AxiosPost from './axios/AxiosPost';
+// import ToDoList from '../../tasks/ToDo';
 // import Website from './task-routing/pages/Website'
 // import About from './task-routing/pages/About'
 // import Home from './React-router-dom/Home';
@@ -128,6 +132,7 @@ function App() {
       {/* FORM  */}
       {/* <SimpleForm/> */}
       {/* <Form/>  */}
+      <BasicHookForm/>
 
       {/* ----------- local storage ---------- */}
       {/* <Crud/> */}
@@ -138,7 +143,13 @@ function App() {
       {/*------------------ axios ---------------  */}
 
       {/* <AxiosGet/> */}
-      <AxiosPost/>
+      {/* <AxiosPost/>  */}
+      {/* <AxiosPuts/>  */}
+      {/* <AxiosDelete/> */}
+
+
+      {/*------------ task ----------- */}
+      {/* <ToDoList/>  */}
 
 
 
