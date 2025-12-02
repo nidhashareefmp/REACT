@@ -3,6 +3,7 @@
 // import AxiosPuts from './axios/AxiosPuts';
 import AxiosDelete from './axios/AxiosDelete';
 import BasicHookForm from './Form/react-hook-form/BasicHookForm';
+import Counter from './Redux/Counter';
 // import './App.css'
 // import Person from './embedding-expression/person';
 // import Items from './React-keys/Items';
@@ -132,7 +133,7 @@ function App() {
       {/* FORM  */}
       {/* <SimpleForm/> */}
       {/* <Form/>  */}
-      <BasicHookForm/>
+      {/* <BasicHookForm/> */}
 
       {/* ----------- local storage ---------- */}
       {/* <Crud/> */}
@@ -156,6 +157,10 @@ function App() {
 
       {/* ----- tasks ------ */}
       {/* <Tasks/> */}
+
+
+      {/* -----------redux ---------- */}
+      <Counter/>
 
     </>
   )
