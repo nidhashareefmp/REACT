@@ -160,7 +160,8 @@ function App() {
 
 
       {/* -----------redux ---------- */}
-      <Counter/>
+      {/* <Counter/> */}
+    
 
     </>
   )
@@ -191,5 +192,46 @@ export default App
 //         <UnMounting/>
 //       </div>
 //     )
-//   }0
+//   }
 // }
+
+
+
+// import React from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { toggleTheme } from "./Redux/tasks/themeslice";
+
+// function App() {
+//   const mode = useSelector((state) => state.theme.mode);
+//   const dispatch = useDispatch();
+
+//   return (
+//     <div
+//       style={{
+//         height: "100vh",
+//         backgroundColor: mode === "light" ? "#ffffff" : "#1a1a1a",
+//         color: mode === "light" ? "#000000" : "#ffffff",
+//         display: "flex",
+//         flexDirection: "column",
+//         alignItems: "center",
+//         justifyContent: "center",
+//         transition: "0.3s",
+//       }}
+//     >
+//       <h1>{mode.toUpperCase()} MODE</h1>
+
+//       <button
+//         onClick={() => dispatch(toggleTheme())}
+//         style={{
+//           marginTop: "20px",
+//           padding: "10px 20px",
+//           cursor: "pointer",
+//         }}
+//       >
+//         Toggle Theme
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default App;
